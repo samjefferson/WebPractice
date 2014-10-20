@@ -1,12 +1,4 @@
-function printArray(){
-	var array = answersSelect(1);
-	var string = array.toString();
 
-	document.getElementById("rape").innerHTMl = string;
-	
-	var myButton = document.getElementById("myButton");
-	myButton.value = "did it work?";
-}
 //Multidimensional array to store questions and answers
 // var capitals [country, capital, difficulty level]
 var capitals = 
@@ -77,6 +69,7 @@ var l3Unasked;
 var l4Unasked;
 var l5Unasked;
 var usedNumbers = [];
+var level = 0;
 
 //allows games to increase level when a certain number of correct answers are reached or there are no more wuestions in that level
 
@@ -100,6 +93,22 @@ function levelUp()
 
 }
 
+function questionSelect(levelNumber){
+
+	var currentAnswersTwo = answersSelect(levelNumber);
+	var questionNumber; 
+
+	for(var i=0; i<currentAnswersTwo.length; i++){
+		if(capitals[currentAnswersTwo[i]][2]== levelNumber){
+			questionNumber = currentAnswersTwo[i];
+		}
+	}
+
+	alert(questionNumber);
+	return questionNumber;
+
+}
+
 
 function answersSelect(levelNumber){
 
@@ -109,9 +118,7 @@ function answersSelect(levelNumber){
 	var levelCorrect = false;
 	var counter = 0;
 
-	alert(currentAnswers.length);
-
-	while(levelCorrect = false){
+	while(levelCorrect == false){
 
 		currentAnswers = [];
 	
@@ -140,8 +147,40 @@ function answersSelect(levelNumber){
 			levelCorrect = true;
 		}
 	}
-
 	
 	return currentAnswers;
 }
+
+function fillButtons(){
+
+	var currentAnswersThree = answersSelect(level);
+	var usedAnswer == false;
+	var buttonArray = [];
+
+	while(buttonArray.length<4){
+		var butRand = Math.floor(Math.random()*3);
+		for(i=0; i<buttonArray.length; i++){
+			if(butRand==buttonArray[i]){
+				usedAnswer=true;
+			}
+		}
+
+		if(usedAnswer==false){
+			buttonArray.push(butRand);
+		}
+		
+
+	}
+
+	$buttonOne.value = (capitals[currentAnswersThree[buttonArray[0]]][1]);
+	$buttonTwo.value = (capitals[currentAnswersThree[buttonArray[1]]][1]);
+	$buttonThree.value = (capitals[currentAnswersThree[buttonArray[2]]][1]);
+	$buttonFour.value = (capitals[currentAnswersThree[buttonArray[3]]][1]);
+
+	return buttonArray;
+}
+
+
+
+
 

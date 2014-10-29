@@ -1,0 +1,64 @@
+body{
+	background-color: #B6FCD5;
+
+}
+
+img.banner{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+p.quizlines{
+	color: black;
+	font-size: 14px;
+	font-family: arial;
+	font-weight: normal;
+	margin-right: auto;
+	margin-left: auto;
+	width: 500px;
+}
+
+#capital{
+	color: #F5821F;
+	font-size: 14px;
+	font-family: arial;
+	font-weight: bold;
+}
+
+.buttonNorm{
+	padding:; 6px;
+	background-color: #F5821F;
+	color: black;
+	font-family: arial;
+	font-size: 14px;
+	font-weight: bold;
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 25px;
+	margin-top: 25px;
+	width: 200px;
+}
+
+#endMes{
+	color: black;
+	font-size: 20px;
+	font-family: arial;
+	font-weight: bold;
+	margin-right: auto;
+	margin-left: auto;
+	width: 500px;
+
+}
+
+#linkOne{
+	display: block;
+	color: #F5821F;
+	font-family: arial;
+	font-size: 14px;
+	font-weight: normal;
+	margin-right: auto;
+	margin-left: auto;
+	width: 500px;
+}

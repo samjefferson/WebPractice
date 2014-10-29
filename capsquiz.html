@@ -1,16 +1,23 @@
 <html>
 <head>
 	<title>Capital Cities</title>
-	<script type=tsxt/javascript src="caps.js"></script>
+	<script type="text/javascript" src="caps.js"></script>
+	<link rel="stylesheet" type="text/css" href="capsstylesheet.css" />
 
 </head>
-<body>
+<body onload="loadGame()">
+	<img class="banner" SRC="banner.jpg">
 	<div>
-	<p onload="fillButtons()">Which of these is the capital city of <span id="capital"></span>?</p>
-	<input type="button" id="buttonOne" value="">
-	<input type="button" id="buttonTwo" value="">
-	<input type="button" id="buttonThree" value="">
-	<input type="button" id="buttonFour" value="">
+	<p class="quizlines"><span id="result"></span></p>
+	<p class="quizlines">Which of these is the capital city of <span id="capital"></span>?</p>
+	
+	<input class="buttonNorm" type="button" id="buttonOne" value="" onclick="clickButOne()">
+	<input class="buttonNorm" type="button" id="buttonTwo" value="" onclick="clickButTwo()">
+	<input class="buttonNorm" type="button" id="buttonThree" value="" onclick="clickButThree()">
+	<input class="buttonNorm" type="button" id="buttonFour" value="" onclick="clickButFour()">
 	</div>
+	<p class="quizlines">Attempts:<span id= "attempts"></span></p>
+	<p class="quizlines">Correct:<span id= "correct"></span></p>
+	<p id="endMes"><span id="endMessage"></span></p>
 </body>
 </html>
